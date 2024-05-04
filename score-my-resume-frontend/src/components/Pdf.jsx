@@ -38,7 +38,7 @@ const Pdf = () => {
     const formData = new FormData();
     formData.append("pdf", pdfFile);
 
-    const response = await fetch("http://localhost:3000/upload", {
+    const response = await fetch(process.env.BACKEND_URL, {
       method: "POST",
       body: formData,
     });
